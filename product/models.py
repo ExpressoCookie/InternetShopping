@@ -20,7 +20,7 @@ class Category(models.Model):
 
 class Manufacturer(models.Model):
     manufacturer_name = models.CharField(max_length=50, unique=True)
-    address = models.CharField(max_length=30, null=True)
+    address = models.CharField(max_length=100, null=True)
     number = models.CharField(max_length=30, null=True)
 
     manufacturer_image = models.ImageField(upload_to='product/images/manufacturer/', blank=True)

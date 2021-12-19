@@ -11,7 +11,7 @@ from .models import Item, Category, Manufacturer
 class ItemList(ListView):
     model = Item
     ordering = '-pk'
-    paginate_by = 6
+    paginate_by = 5
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(ItemList,self).get_context_data()

@@ -25,7 +25,17 @@
         {% if item.manufacturer %}
         <span class="badge badge-pill badge-primary">{{ item.manufacturer }}</span>
         {% endif %}
-        <p>{{ item.note }}</p>
+        <p></p>
+        {% if item.note %}
+        <span class="badge badge-pill">{{ item.note }}</span>
+        {% endif %}
+        {% if item.gram %}
+        <span class="badge badge-pill">1회 제공량 : {{ item.gram }}</span>
+        {% endif %}
+        {% if item.kcal %}
+        <span class="badge badge-pill">{{ item.kcal }}</span>
+        {% endif %}
+
     </header>
     <!-- Preview image figure-->
     <figure class="mb-4">

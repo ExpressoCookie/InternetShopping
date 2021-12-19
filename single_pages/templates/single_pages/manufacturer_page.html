@@ -37,6 +37,23 @@
                 </div>
             </div>
         </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <h3>제조사 정보</h3>
+                </div>
+            </div>
+            {% for m in manufacturer_list %}
+            <div class="card mt-2 col-6">
+                <img class="card-img-top" src="{{ m.manufacturer_image.url }}"/>
+                <div class="card-body">
+                    <h5>{{ m.manufacturer_name }}</h5>
+                    <p>{{ m.address }}</p>
+                    <p>{{ m.number }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
@@ -136,7 +153,7 @@
     });
 </script>
 
-<div class="fixed-bottom">
+<div>
     {% include 'product/footer.html' %}
 </div>
 
